@@ -1,4 +1,4 @@
-import jiraEmptyIssue from '../rules/jiraEmptyIssue';
+import jiraEmptyIssue from '../jiraEmptyIssue';
 
 describe('jiraEmptyIssue, check if jira issue is empty or not', () => {
 
@@ -20,7 +20,7 @@ describe('jiraEmptyIssue, check if jira issue is empty or not', () => {
 
     });
 
-    describe('should valid the commit message', () => {
+    describe('should validate the commit message', () => {
 
         it('The commit contain a jira issue', () => {
             const parsed = {

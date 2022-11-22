@@ -1,4 +1,4 @@
-import jiraMinLengthIssue from '../rules/jiraMinLengthIssue';
+import jiraMinLengthIssue from '../jiraMinLengthIssue';
 
 describe('jiraMinLengthIssue, check jira issue minLength (default=3)', () => {
 
@@ -37,7 +37,7 @@ describe('jiraMinLengthIssue, check jira issue minLength (default=3)', () => {
 
     });
 
-    describe('should valid the commit message', () => {
+    describe('should validate the commit message', () => {
 
         it('Issue length is not shorter than value (default=3)', () => {
             const parsed = {

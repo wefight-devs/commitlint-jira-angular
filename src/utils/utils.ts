@@ -1,4 +1,4 @@
-import { ISegmentedCommitMessage } from "../../types/types";
+import { ISegmentedCommitMessage } from "../types/types";
 
 const getJiraIssues = (commitMessage: string): string[] => {
     let issues: any = [];
@@ -29,9 +29,13 @@ const getPartOfCommit = (commitMessage: string, separator: string, type: string)
 const getCommitType = (header: string): string => {
     let commitType = "";
     const startScopeIndexOf = header.indexOf("(");
-    const endScopeIndexOf = header.indexOf(")") - 1;
-    const stringToRemove = header.substr(startScopeIndexOf, endScopeIndexOf);
-    commitType = header.replace(stringToRemove, "").replace(/\s/g, "");
+    const endScopeIndexOf = header.indexOf(")") + 1;
+    if (startScopeIndexOf > 0 && endScopeIndexOf > 0) {
+        const stringToRemove = header.substr(startScopeIndexOf, endScopeIndexOf - startScopeIndexOf);
+        commitType = header.replace(stringToRemove, "").replace(/\s/g, "");
+    } else {
+        commitType = header.replace(/\s/g, "");
+    }
     return commitType;
 }
 

@@ -1,5 +1,5 @@
 {
-  "name": "commitlint-jira-angular",
+  "name": "commitlint-plugin-jira-angular",
   "description": "",
   "version": "1.0.0",
   "license": "MIT",
@@ -41,5 +41,8 @@
     "webpack": "^4.40.2",
     "webpack-cli": "^3.3.8",
     "ts-node": "^10.4.0"
+  },
+  "peerDependencies": {
+    "@commitlint/lint": ">=7.6.0"
   }
 }

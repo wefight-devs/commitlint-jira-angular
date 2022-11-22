@@ -1,4 +1,4 @@
-import jiraValidIssue from '../rules/jiraValidIssue';
+import jiraValidIssue from '../jiraValidIssue';
 
 describe('jiraValidIssue, check if commit message use a valid separator', () => {
 
@@ -37,7 +37,7 @@ describe('jiraValidIssue, check if commit message use a valid separator', () => 
 
     });
 
-    describe('should valid the commit message', () => {
+    describe('should validate the commit message', () => {
 
         it('The commit contain a valid separator', () => {
             const parsed = {

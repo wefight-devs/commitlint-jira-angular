@@ -1,5 +1,5 @@
 import { COMMIT_TYPES } from '../../types/contantes';
-import commitTypeEmpty from '../rules/commitTypeEmpty';
+import commitTypeEmpty from '../commitTypeEmpty';
 
 describe('commitTypeEmpty, check if commit message contain valid type from angular convention', () => {
 
@@ -21,7 +21,7 @@ describe('commitTypeEmpty, check if commit message contain valid type from angul
 
     });
 
-    describe('should valid the commit message', () => {
+    describe('should validate the commit message', () => {
 
         it('The commit contain a valid type', () => {
             const parsed = {

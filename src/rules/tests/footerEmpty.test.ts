@@ -1,4 +1,4 @@
-import footerEmpty from '../rules/footerEmpty';
+import footerEmpty from '../footerEmpty';
 
 describe('footerEmpty, check if commit message contain footer', () => {
 
@@ -20,7 +20,7 @@ describe('footerEmpty, check if commit message contain footer', () => {
 
     });
 
-    describe('should valid the commit message', () => {
+    describe('should validate the commit message', () => {
 
         it('The commit contain a footer', () => {
             const parsed = {

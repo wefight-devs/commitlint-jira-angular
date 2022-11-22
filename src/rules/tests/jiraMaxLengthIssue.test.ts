@@ -1,4 +1,4 @@
-import jiraMaxLengthIssue from '../rules/jiraMaxLengthIssue';
+import jiraMaxLengthIssue from '../jiraMaxLengthIssue';
 
 describe('jiraMaxLengthIssue, check jira issue maxLength (default=9)', () => {
 
@@ -37,7 +37,7 @@ describe('jiraMaxLengthIssue, check jira issue maxLength (default=9)', () => {
 
     });
 
-    describe('should valid the commit message', () => {
+    describe('should validate the commit message', () => {
 
         it('Issue length is not greater than value (default=9)', () => {
             const parsed = {

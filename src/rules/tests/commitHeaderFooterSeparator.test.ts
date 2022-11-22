@@ -1,4 +1,4 @@
-import commitHeaderFooterSeparator from '../rules/commitHeaderFooterSeparator';
+import commitHeaderFooterSeparator from '../commitHeaderFooterSeparator';
 
 describe('commitHeaderFooterSeparator, check if commit message use a valid separator', () => {
 
@@ -20,7 +20,7 @@ describe('commitHeaderFooterSeparator, check if commit message use a valid separ
 
     });
 
-    describe('should valid the commit message', () => {
+    describe('should validate the commit message', () => {
 
         it('The commit contain a valid separator', () => {
             const parsed = {

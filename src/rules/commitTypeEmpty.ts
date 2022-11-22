@@ -1,5 +1,5 @@
-import { COMMIT_EMPTY_MESSAGE, COMMIT_TYPES } from '../../types/contantes'
-import { TRule } from '../../types/types'
+import { COMMIT_EMPTY_MESSAGE, COMMIT_TYPES } from '../types/contantes'
+import { TRule } from '../types/types'
 import { segmentCommitMessage } from '../utils/utils'
 
 const commitTypeEmpty: TRule = (
