@@ -1,9 +1,7 @@
 /node_modules
 /src
 **/tests
-webpack.config.js
 tsconfig.json
 tsconfig.build.json
-src
 junit.xml
 jest.config.tsx
