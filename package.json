@@ -1,7 +1,7 @@
 {
   "name": "@wefight-nico.lp/commitlint-plugin-jira-angular",
   "description": "A commitlint plugin that permit to check issue jira while respecting angular convention",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "author": "Laporte Nicolas <nicolas.laporte@wefight.co> (https://github.com/laport-n)",
   "keywords": [
