@@ -1,13 +1,9 @@
 {
-  "name": "commitlint-plugin-jira-angular",
-  "description": "",
+  "name": "@wefight-nico.lp/commitlint-plugin-jira-angular",
+  "description": "We should be OK for =>",
   "version": "1.0.0",
   "license": "MIT",
-  "author": {
-    "name": "Laporte Nicolas",
-    "email": "nicolas.laporte@wefight.co",
-    "url": "https://github.com/laport-n"
-  },
+  "author": "Laporte Nicolas <nicolas.laporte@wefight.co> (https://github.com/laport-n)",
   "keywords": [
     "commitlint",
     "jira-commitlint",
@@ -19,15 +15,16 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/wefight-devs/commitlint-jira-angular"
+    "url": "git+https://github.com/wefight-devs/commitlint-jira-angular.git"
   },
   "bugs": {
     "url": "https://github.com/wefight-devs/commitlint-jira-angular/issues"
   },
-  "main": "./build/index.js",
-  "types": "./@types",
+  "main": "./build/src/index.js",
   "scripts": {
-    "test": "TEST=true jest"
+    "test": "TEST=true jest",
+    "build": "tsc --project tsconfig.build.json",
+    "transpile": "tsc"
   },
   "devDependencies": {
     "@types/jest": "^27.0.3",
@@ -44,5 +41,7 @@
   },
   "peerDependencies": {
     "@commitlint/lint": ">=7.6.0"
-  }
+  },
+  "homepage": "https://github.com/wefight-devs/commitlint-jira-angular#readme",
+  "dependencies": {}
 }

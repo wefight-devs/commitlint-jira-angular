@@ -1,4 +1,3 @@
-import { CommitlintPluginJira } from './types/types'
 import commitHeaderFooterSeparator from './rules/commitHeaderFooterSeparator'
 import commitTypeEmpty from './rules/commitTypeEmpty'
 import footerEmpty from './rules/footerEmpty'
@@ -7,7 +6,7 @@ import jiraMaxLengthIssue from './rules/jiraMaxLengthIssue'
 import jiraMinLengthIssue from './rules/jiraMinLengthIssue'
 import jiraValidIssue from './rules/jiraValidIssue'
 
-export const commitlintPluginJiraAngular: CommitlintPluginJira = {
+module.exports  = {
   rules: {
     'jira-angular-commit-header-footer-separator': commitHeaderFooterSeparator,
     'jira-angular-commit-type-empty': commitTypeEmpty,
@@ -18,5 +17,3 @@ export const commitlintPluginJiraAngular: CommitlintPluginJira = {
     'jira-angular-commit-valid-issue': jiraValidIssue,
   },
 }
-
-export default commitlintPluginJiraAngular;

@@ -1,0 +1,5 @@
+{
+    "extends": "./tsconfig.json",
+    "exclude": ["node_modules", "test", "dist", "clientDist", "**/*spec.ts", "*.config.ts", "*-init.js", "swaggerGenerator", "reports*"],
+    "include": [".npmrc","package.json", "src/*"]
+}
