@@ -1,9 +1,9 @@
 {
-  "name": "@wefight-nico.lp/commitlint-plugin-jira-angular",
-  "description": "A commitlint plugin that permit to check issue jira while respecting angular convention",
-  "version": "1.0.3",
+  "name": "@wefight-dev/commitlint-plugin-jira-angular",
+  "description": "A commitlint plugin that permit to check if commit messages are respecting angular convention and contain at least 1 issue jira. example => git commit -m 'fix (JIR-42) : my commit message'",
+  "version": "1.0.2",
   "license": "MIT",
-  "author": "Laporte Nicolas <nicolas.laporte@wefight.co> (https://github.com/laport-n)",
+  "author": "Wefight",
   "keywords": [
     "commitlint",
     "jira-commitlint",
