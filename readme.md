@@ -3,7 +3,15 @@
 ##### Install dependencies
 
 ```bash
-npm install --save-dev @commitlint/cli @wefight-nico.lp/commitlint-plugin-jira-angular 
+npm install --save-dev @commitlint/cli @wefight-dev/commitlint-plugin-jira-angular 
+```
+
+## Allow commits
+
+```bash
+// ✅ Allowed commit messages
+git commit -m"fix (IB-2121, IB-21): My commit message body"
+git commit -m"feat (IB-0000): My commit message body"
 ```
 
 ##### Configure commitlint to use jira commits messages style config
@@ -46,12 +54,4 @@ module.exports = {
     ]
   }
 }
-```
-
-## Allow commits
-
-```bash
-// ✅ Allowed commit messages
-git commit -m"fix (IB-2121, IB-21): My commit message body"
-git commit -m"feat (IB-0000): My commit message body"
 ```
