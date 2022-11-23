@@ -12,7 +12,7 @@ npm install --save-dev @commitlint/cli @wefight-nico.lp/commitlint-plugin-jira-a
 // commitlint.config.js
 module.exports = {
   plugins: [
-    "@wefight-nico.lp/commitlint-plugin-jira-angular"
+    "@wefight-dev/commitlint-plugin-jira-angular"
   ],
   rules: {
     "jira-angular-commit-header-footer-separator": [
