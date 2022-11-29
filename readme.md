@@ -39,17 +39,17 @@ module.exports = {
       "always",
       ":"
     ],
-    // rule to check if commit contain at least one commit type: 'fix', 'feat', 'chore', 'docs', 'style', 'refactor', 'perf', 'test'
+    // rule to check if commit contains at least one commit type: 'fix', 'feat', 'chore', 'docs', 'style', 'refactor', 'perf', 'test'
     "jira-angular-commit-type-empty": [
       2,
       "always"
     ],
-    // rule to check if commit contain a footer, e.g: git commit -m "header:footer"
+    // rule to check if commit contains a footer, e.g: git commit -m "header:footer"
     "jira-angular-commit-footer-empty": [
       2,
       "always"
     ],
-    // rule to check if commit contain at least one jira issue
+    // rule to check if commit contains at least one jira issue
     "jira-angular-commit-empty-issue": [
       2,
       "always"
