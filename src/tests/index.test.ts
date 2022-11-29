@@ -24,7 +24,7 @@ describe('all rules to validate a jira and angular convention commit message', (
     describe('should validate the commit message', () => {
         it('The commit message contain one commit type and one issue with a footer tha contain information', ()=> {
             const parsed = {
-                raw: 'fix (JIR-243): my commit message'
+                raw: 'fix(JIR-243): my commit message'
             };
             const rulesRes = testAllRules(parsed);
             expect(rulesRes.commitHeaderFooterSeparatorRes[0]).toEqual(true);
@@ -38,7 +38,7 @@ describe('all rules to validate a jira and angular convention commit message', (
 
         it('The commit message contain one commit type and issues with a footer tha contain information', ()=> {
             const parsed = {
-                raw: 'feat (JIR-243, JIR-76, IS-234): my commit message with more issues'
+                raw: 'feat(JIR-243, JIR-76, IS-234): my commit message with more issues'
             };
             const rulesRes = testAllRules(parsed);
             expect(rulesRes.commitHeaderFooterSeparatorRes[0]).toEqual(true);
@@ -67,7 +67,7 @@ describe('all rules to validate a jira and angular convention commit message', (
 
         it('The commit message contain one commit type and issues with a footer tha contain information without spaces with breaking change', ()=> {
             const parsed = {
-                raw: `feat (JIR-243,JIR-76,IS-234): my commit message with more issues
+                raw: `feat(JIR-243,JIR-76,IS-234): my commit message with more issues
                        
                       BREAKING CHANGE: yeah test breaking`
             };
