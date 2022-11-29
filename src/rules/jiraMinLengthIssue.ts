@@ -11,7 +11,7 @@ const jiraMinLengthIssue: TRule = (
         const segmentedCommitMessage = segmentCommitMessage(parsed.raw);
         return [
             !segmentedCommitMessage.issues.find(issue => issue.length < value), 
-            `Issues must not be shorter than ${value} characters`
+            `jira issues must not be shorter than ${value} characters`
         ];
     }
     return [false, COMMIT_EMPTY_MESSAGE];

@@ -10,7 +10,7 @@ const commitTypeEmpty: TRule = (
         const isValid = COMMIT_TYPES.includes(segmentedCommitMessage.commitType);
         return [
             isValid,
-            `The commit message must provide one commit type on the commit message example => fix (JIR-233): my commit type is fix`
+            `commit must contain at least one commit type (angular convention), e.g: "fix (JIR-233): my commit type is fix"`
         ];
     }
     return [false, COMMIT_EMPTY_MESSAGE];

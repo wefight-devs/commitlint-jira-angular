@@ -3,10 +3,10 @@
 ##### Install dependencies
 
 ```bash
-npm install --save-dev @commitlint/cli @wefight-dev/commitlint-plugin-jira-angular 
+npm install --save-dev @commitlint/cli @wefight-dev/commitlint-plugin-jira-angular
 ```
 
-## Allow commits
+## Allowed commits
 
 ```bash
 ✅ Allowed commit messages
@@ -33,35 +33,46 @@ module.exports = {
     "@wefight-dev/commitlint-plugin-jira-angular"
   ],
   rules: {
+    // rule to check separator between commit header and footer (default=":")
     "jira-angular-commit-header-footer-separator": [
       2,
       "always",
       ":"
     ],
+    // rule to check if commit contain at least one commit type: 'fix', 'feat', 'chore', 'docs', 'style', 'refactor', 'perf', 'test'
     "jira-angular-commit-type-empty": [
       2,
       "always"
     ],
+    // rule to check if commit contain a footer, e.g: git commit -m "header:footer"
     "jira-angular-commit-footer-empty": [
       2,
       "always"
     ],
+    // rule to check if commit contain at least one jira issue
     "jira-angular-commit-empty-issue": [
       2,
       "always"
     ],
+    // rule to check max-length of jira issue (default=9)
     "jira-angular-commit-max-length-issue": [
       2,
-      "always"
+      "always",
+      9
     ],
+    // rule to check min-length of jira issue (default=3)
     "jira-angular-commit-min-length-issue": [
       2,
-      "always"
+      "always",
+      3
     ],
+    // rule to check if commit jira issue are well formated (default="-")
     "jira-angular-commit-valid-issue": [
       2,
-      "always"
+      "always",
+      "-"
     ],
+    // rule to check if commit type and jira issue are not separated by whitespace (need for semantic-release to works)
     "jira-angular-commit-type-and-jira-issue-no-separator": [
       2,
       "always"
