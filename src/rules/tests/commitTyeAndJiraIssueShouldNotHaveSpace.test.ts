@@ -9,7 +9,7 @@ describe('commitTypeAndJiraIssueShouldNotHaveSpace, check if commit message cont
                 raw: 'fix (JIR-322): my commit message',
             }
             expect(commitTypeAndJiraIssueShouldNotHaveSpace(parsed)[0]).toEqual(false);
-            expect(commitTypeAndJiraIssueShouldNotHaveSpace(parsed)[1]).toEqual("your commit is not well formated, type and jira issue should not be separated by a witespace =>  fix(JIR-333): my commit message");
+            expect(commitTypeAndJiraIssueShouldNotHaveSpace(parsed)[1]).toEqual(`commit type and issue must not be separated by witespace, e.g: "fix(JIR-333): my commit message"`);
         });
 
         it('The commit do not contain any issue', () => {
@@ -17,7 +17,7 @@ describe('commitTypeAndJiraIssueShouldNotHaveSpace, check if commit message cont
                 raw: 'feat: my commit message',
             }
             expect(commitTypeAndJiraIssueShouldNotHaveSpace(parsed)[0]).toEqual(false);
-            expect(commitTypeAndJiraIssueShouldNotHaveSpace(parsed)[1]).toEqual("Your commit do not contain any issue. you need at least One => fix(JIR-333): my commit message");
+            expect(commitTypeAndJiraIssueShouldNotHaveSpace(parsed)[1]).toEqual(`commit must contain at least one jira issue, e.g: "fix(JIR-333): my commit message"`);
 
         });
     });

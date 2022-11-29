@@ -31,7 +31,7 @@ describe('jiraValidIssue, check if commit message use a valid separator', () => 
             }
             const res = jiraValidIssue(parsed, undefined, ",");
             expect(res[0]).toEqual(false);
-            expect(res[1]).toEqual("valid separator for jira issue are - or _");
+            expect(res[1]).toEqual('commit jira issues must have valid separator, e.g: "- or _"');
 
         });
 

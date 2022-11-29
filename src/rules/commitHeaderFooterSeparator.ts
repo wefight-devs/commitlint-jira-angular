@@ -13,7 +13,7 @@ const commitHeaderFooterSeparator: TRule = (
     );
     return [
       (findedSeparators && findedSeparators[0]) ? true : false,
-      `Commit message parts must be separated with "${value}" example => fix (IB-2121)${value} My commit message body`,
+      `Commit message parts must be separated with "${value}" e.g: fix(IB-2121)${value} My commit message body`,
     ]
   }
   return [false, COMMIT_EMPTY_MESSAGE];

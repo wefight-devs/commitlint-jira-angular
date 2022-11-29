@@ -7,7 +7,7 @@ const jiraValidIssue: TRule = (
     _when,
     value = JIRA_ISSUE_SEPERATOR
 ) => {
-    if (!['-', '_'].includes(value.toString())) return [false, 'valid separator for jira issue are - or _'];
+    if (!['-', '_'].includes(value.toString())) return [false, 'commit jira issues must have valid separator, e.g: "- or _"'];
     if (parsed.raw) {
         const segmentedCommitMessage = segmentCommitMessage(parsed.raw);
         let isValid = true;
@@ -17,7 +17,7 @@ const jiraValidIssue: TRule = (
             );
             isValid = (findedSeparators && findedSeparators[0]) ? true : false;
         }
-        return [isValid, `jira issues are not well formated example=>  fix (JIR${value}333): my commit message`]
+        return [isValid, `commit must contain jira issue well formated, e.g: "fix(JIR${value}333): my commit message"`]
     }
     return [false, COMMIT_EMPTY_MESSAGE];
 }

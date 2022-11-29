@@ -9,7 +9,7 @@ const footerEmpty: TRule = (
         const segmentedCommitMessage = segmentCommitMessage(parsed.raw);
         return [
             segmentedCommitMessage.footer?.length > 0,
-            `the commit message footer should not be empty example => header: my footer message`
+            `commit footer must not be empty, e.g "header(issue-111): my footer message"`
         ];
     }
     return [false, COMMIT_EMPTY_MESSAGE];

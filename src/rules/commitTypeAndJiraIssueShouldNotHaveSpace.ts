@@ -14,9 +14,9 @@ const commitTypeAndJiraIssueShouldNotHaveSpace: TRule = (
                 isValid = false;
             }
         } else {
-            return [false, `Your commit do not contain any issue. you need at least One => fix(JIR-333): my commit message`];
+            return [false, `commit must contain at least one jira issue, e.g: "fix(JIR-333): my commit message"`];
         }
-        return [isValid, `your commit is not well formated, type and jira issue should not be separated by a witespace =>  fix(JIR-333): my commit message`]
+        return [isValid, `commit type and issue must not be separated by witespace, e.g: "fix(JIR-333): my commit message"`]
     }
     return [false, COMMIT_EMPTY_MESSAGE];
 }
