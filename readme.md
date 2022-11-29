@@ -61,6 +61,10 @@ module.exports = {
     "jira-angular-commit-valid-issue": [
       2,
       "always"
+    ],
+    "jira-angular-commit-type-and-jira-issue-no-separator": [
+      2,
+      "always"
     ]
   }
 }
